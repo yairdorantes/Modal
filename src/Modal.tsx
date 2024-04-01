@@ -14,7 +14,7 @@ const Modal = ({ children, isOpen, onClose }: Props) => {
       {isOpen && (
         <motion.div
           //   className="modal-overlay"
-          className="w-screen h-screen bg-black flex justify-center items-center bg-opacity-20 fixed top-0 "
+          className="w-screen h-screen bg-black flex justify-center items-center bg-opacity-50 fixed top-0 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -24,7 +24,6 @@ const Modal = ({ children, isOpen, onClose }: Props) => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            drag
             transition={{ duration: 0.3 }} // Adjust the duration as needed
           >
             <OutsideClickHandler
